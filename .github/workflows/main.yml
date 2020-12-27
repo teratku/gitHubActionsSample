@@ -35,7 +35,7 @@ jobs:
 
       - name: RunTests
         run: xcodebuild
-             -scheme gitHubActionsTest
+             -scheme ./
              -sdk iphonesimulator
              -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max'
              clean test
