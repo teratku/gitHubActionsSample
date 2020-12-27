@@ -28,13 +28,12 @@ jobs:
       - name: Select Xcode version
         run: sudo xcode-select -s '/Applications/Xcode_12.3.app/Contents/Developer'
       - name: Show Xcode version
-        run: xcodebuild -version
+        run: xcodebuild -version 
       
-      - name: LS command
-        run: ls -al gitHubActionsTest
 
       - name: RunTests
         run: xcodebuild
+             -project gitHubActionsTest/gitHubActionsTest.xcodeproj
              -scheme gitHubActionsTest
              -sdk iphonesimulator
              -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max'
